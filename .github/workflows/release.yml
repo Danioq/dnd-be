@@ -1,6 +1,9 @@
 name: Release
 
-on: [tags, workflow_dispatch]
+on: 
+  push: 
+    tags:
+  workflow_dispatch:
 
 jobs:
   docker:
