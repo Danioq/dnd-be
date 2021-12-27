@@ -15,4 +15,4 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
           repository: danioq/dnd-be
-          tags: ${GITHUB_REF##*/}
+          tags: ${{ github.ref }}
