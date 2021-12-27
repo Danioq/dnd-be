@@ -3,19 +3,6 @@ name: CI
 on: [pull_request, workflow_dispatch]
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-
-  #   strategy:
-  #     matrix:
-  #       go: [ '1.17' ]
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Setup go
-  #       uses: actions/setup-go@v2
-  #       with:
-  #         go-version: ${{ matrix.go }}
-  #     - run: go build .
   docker:
     runs-on: ubuntu-latest
     steps:
@@ -28,4 +15,4 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
           repository: danioq/dnd-be
-          tags: latest
+          tags: ${GITHUB_REF##*/}
