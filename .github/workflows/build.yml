@@ -35,4 +35,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ github.actor }}/dnd-be:latest
+          tags: danioq/dnd-be:latest
